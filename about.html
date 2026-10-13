@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="hao123.us 美国导航的介绍、收录标准、提交网站方式和隐私说明。"><link rel="canonical" href="https://hao123.us/about.html"><link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg"><link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"><link rel="manifest" href="/favicon/site.webmanifest"><title>关于本站 · 提交网站 · 隐私说明 - 美国导航</title><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="hao123.us"><meta property="og:title" content="关于本站 · 提交网站 · 隐私说明 - 美国导航"><meta property="og:description" content="hao123.us 美国导航的介绍、收录标准、提交网站方式和隐私说明。"><meta property="og:url" content="https://hao123.us/about.html"><meta property="og:image" content="https://hao123.us/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="zh_CN"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="关于本站 · 提交网站 · 隐私说明 - 美国导航"><meta name="twitter:description" content="hao123.us 美国导航的介绍、收录标准、提交网站方式和隐私说明。"><meta name="twitter:image" content="https://hao123.us/og.png"><script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = saved || (prefersDark ? 'dark' : 'light');
+          document.documentElement.dataset.theme = theme;
+        } catch (e) {}
+      })();
+    </script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-NE12J1LT5P"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-NE12J1LT5P');
+    </script><link rel="stylesheet" href="/_astro/about.BwbJ2JVy.css"></head> <body> <a class="skip-link" href="#main">跳到内容</a>   <header class="site-header"> <div class="container"> <div class="header-top"> <a class="logo" href="/" aria-label="hao123.us 首页"> <img src="/logo.png" alt="hao123.us" width="44" height="44"> <span class="logo-text">hao123<em>.us</em></span> </a> <form class="search-form" id="search-form" target="_blank"> <select id="search-engine" aria-label="搜索引擎"> <option value="https://www.google.com/search?q=">Google</option> <option value="https://www.bing.com/search?q=">Bing</option> <option value="https://www.baidu.com/s?wd=">百度</option> <option value="https://duckduckgo.com/?q=">DuckDuckGo</option> <option value="https://www.youtube.com/results?search_query=">YouTube</option> <option value="https://www.amazon.com/s?k=">Amazon</option> <option value="https://www.google.com/maps/search/">Google 地图</option> <option value="https://zh.wikipedia.org/w/index.php?search=">维基百科</option> </select> <input type="text" id="search-input" name="q" placeholder="输入关键词筛选本页，回车用引擎搜索…" autocomplete="off" aria-label="筛选本页网站或搜索"> <button type="submit">搜索</button> </form> <button class="theme-toggle" id="theme-toggle" aria-label="切换深色/浅色主题" aria-pressed="false" title="切换深色/浅色主题"> <span class="theme-icon theme-icon-moon"><svg aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+</span> <span class="theme-icon theme-icon-sun"><svg aria-hidden="true" focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+</span> </button> </div> </div> </header> <script>
+  (function () {
+    const form = document.getElementById('search-form');
+    const engineSel = document.getElementById('search-engine');
+    const input = document.getElementById('search-input');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const q = input.value.trim();
+      if (!q) return;
+      const url = engineSel.value + encodeURIComponent(q);
+      window.open(url, '_blank', 'noopener');
+    });
+
+    // 记住上次选的搜索引擎
+    try {
+      const savedEngine = localStorage.getItem('search-engine');
+      if (savedEngine && [...engineSel.options].some((o) => o.value === savedEngine)) {
+        engineSel.value = savedEngine;
+      }
+    } catch (e) {}
+    engineSel.addEventListener('change', () => {
+      try {
+        localStorage.setItem('search-engine', engineSel.value);
+      } catch (e) {}
+    });
+
+    // 站内实时筛选：输入即隐藏不匹配的卡片与空分类，回车仍走上面的引擎搜索。
+    // 本脚本在 <main> 之前解析执行，必须等 DOM 就绪后再去找 .content。
+    const initFilter = () => {
+      const content = document.querySelector('.content');
+      if (!content) return;
+      const cards = Array.from(content.querySelectorAll('[data-site]'));
+      const sections = Array.from(content.querySelectorAll('[data-category]'));
+      let empty = null;
+
+      const ensureEmpty = () => {
+        if (empty) return empty;
+        empty = document.createElement('div');
+        empty.className = 'search-empty';
+        empty.hidden = true;
+        content.appendChild(empty);
+        return empty;
+      };
+
+      const applyFilter = (raw) => {
+        const q = raw.trim().toLowerCase();
+        if (!q) {
+          cards.forEach((c) => c.classList.remove('is-hidden'));
+          sections.forEach((s) => s.classList.remove('is-hidden'));
+          if (empty) empty.hidden = true;
+          return;
+        }
+        cards.forEach((c) => {
+          const hay = c.getAttribute('data-search') || '';
+          c.classList.toggle('is-hidden', !hay.includes(q));
+        });
+        let anyVisible = false;
+        sections.forEach((s) => {
+          const visible = s.querySelector('[data-site]:not(.is-hidden)') !== null;
+          s.classList.toggle('is-hidden', !visible);
+          if (visible) anyVisible = true;
+        });
+        const engineName =
+          engineSel.options[engineSel.selectedIndex]?.text || '搜索引擎';
+        const el = ensureEmpty();
+        el.hidden = anyVisible;
+        if (!anyVisible) {
+          el.innerHTML =
+            '没有匹配「<strong></strong>」的网站，按回车用 <strong></strong> 搜索';
+          el.querySelectorAll('strong')[0].textContent = raw.trim();
+          el.querySelectorAll('strong')[1].textContent = engineName;
+        }
+      };
+
+      input.addEventListener('input', (e) => applyFilter(e.target.value));
+      if (input.value) applyFilter(input.value);
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFilter);
+    } else {
+      initFilter();
+    }
+
+    // 快捷键：按 / 聚焦搜索框，Esc 清空
+    document.addEventListener('keydown', (e) => {
+      const tag = (e.target.tagName || '').toLowerCase();
+      const typing = tag === 'input' || tag === 'textarea' || tag === 'select';
+      if (e.key === '/' && !typing) {
+        e.preventDefault();
+        input.focus();
+      } else if (e.key === 'Escape' && e.target === input) {
+        input.value = '';
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.blur();
+      }
+    });
+
+    const toggle = document.getElementById('theme-toggle');
+    const sync = () => {
+      const dark = document.documentElement.dataset.theme === 'dark';
+      toggle.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    };
+    sync();
+    toggle.addEventListener('click', () => {
+      const cur = document.documentElement.dataset.theme || 'light';
+      const next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      try {
+        localStorage.setItem('theme', next);
+      } catch (e) {}
+      sync();
+    });
+  })();
+</script> <main class="about container" id="main"> <article class="about-card"> <h1>关于本站</h1> <p>
+hao123.us 是一个面向海外华人的网址导航站，把在美国生活、工作、学习常用的网站按分类整理在一页里：
+        AI 工具、中国大模型、银行金融、求职招聘、新移民必备、买车租房、旅行出行、中英文新闻、海外中文社区等。
+</p> <p>
+站点是纯静态页面，没有后台、没有账号、没有广告。所有链接都定期用脚本巡检，失效的会及时替换或下线。
+</p> <h2 id="submit">提交网站</h2> <p>欢迎推荐你觉得海外华人用得上的网站。收录标准：</p> <ul> <li>对在美华人或中文用户有实际用处，不收录纯营销页、导流页</li> <li>站点可正常访问，内容持续更新</li> <li>同一类目下已有同类站点时，只收录明显更好用的</li> </ul> <p>
+提交方式：到
+<a href="https://github.com/wanghero/hao123.github.io/issues/new" target="_blank" rel="noopener noreferrer">GitHub 提一个 issue</a>，
+        写上网址、建议放的分类和一句话介绍即可。发现失效链接或分类有误，也用同一个入口反馈。
+</p> <h2 id="privacy">隐私说明</h2> <p>
+本站不要求注册，不收集姓名、邮箱等个人信息。你在搜索框里输入的内容只在浏览器本地筛选，按回车后直接跳转到你选择的搜索引擎，本站不会记录。
+</p> <p>
+本站使用 Google Analytics 统计访问量（页面浏览、来源、设备类型等匿名数据），用于了解哪些分类更常用。
+        如不希望被统计，可以安装
+<a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics 停用插件</a>
+或在浏览器里屏蔽 googletagmanager.com。
+</p> <p>
+主题（深色/浅色）和搜索引擎的选择保存在你浏览器的 localStorage 里，不会上传。站点图标为各网站自己的 favicon，由本站在构建时抓取并托管，访问时不会向第三方发请求。
+</p> <p class="about-back"><a href="/">← 返回首页</a></p> </article> </main> <footer class="site-footer"> <div class="container"> <nav class="footer-links" aria-label="页脚"> <a href="/about.html">关于本站</a> <a href="/about.html#submit">提交网站</a> <a href="/about.html#privacy">隐私说明</a> <a href="/ai.html">AI 工具大全</a> <a href="https://github.com/wanghero/hao123.github.io/issues" target="_blank" rel="noopener noreferrer">反馈问题</a> </nav> <div class="footer-meta">hao123.us · 关于本站 · v2.0.44</div> </div> </footer>  <nav id="scroll-nav" class="scroll-nav" aria-label="页面滚动" aria-hidden="true"> <button type="button" class="scroll-nav-btn" data-action="top" aria-label="回到顶部" title="回到顶部"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M5 3h14"></path><path d="m18 13-6-6-6 6"></path><path d="M12 7v14"></path> </svg> </button> <button type="button" class="scroll-nav-btn" data-action="up" aria-label="上一屏" title="上一屏"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="m18 15-6-6-6 6"></path> </svg> </button> <button type="button" class="scroll-nav-btn" data-action="down" aria-label="下一屏" title="下一屏"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="m6 9 6 6 6-6"></path> </svg> </button> <button type="button" class="scroll-nav-btn" data-action="bottom" aria-label="到底部" title="到底部"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M12 17V3"></path><path d="m6 11 6 6 6-6"></path><path d="M19 21H5"></path> </svg> </button> </nav> <script>
+      (function () {
+        var nav = document.getElementById('scroll-nav');
+        if (!nav) return;
+        var buttons = nav.querySelectorAll('.scroll-nav-btn');
+        var MIN_SCROLLABLE = 200;
+        var EDGE = 8;
+        var ticking = false;
+        var lastState = '';
+        function setDisabled(btn, disabled) {
+          btn.disabled = disabled;
+          btn.setAttribute('aria-disabled', disabled ? 'true' : 'false');
+        }
+        function update() {
+          ticking = false;
+          var scrollY = window.scrollY || document.documentElement.scrollTop;
+          var viewH = window.innerHeight;
+          var docH = document.documentElement.scrollHeight;
+          var scrollable = docH - viewH;
+          var visible = scrollable > MIN_SCROLLABLE;
+          var atTop = scrollY <= EDGE;
+          var atBottom = scrollY >= scrollable - EDGE;
+          var state = [visible, atTop, atBottom].join(',');
+          if (state === lastState) return;
+          lastState = state;
+          nav.classList.toggle('visible', visible);
+          nav.setAttribute('aria-hidden', visible ? 'false' : 'true');
+          for (var i = 0; i < buttons.length; i++) {
+            var a = buttons[i].dataset.action;
+            setDisabled(buttons[i], (a === 'top' || a === 'up') ? atTop : atBottom);
+          }
+        }
+        function schedule() {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(update);
+        }
+        nav.addEventListener('click', function (e) {
+          var btn = e.target.closest('.scroll-nav-btn');
+          if (!btn || btn.disabled) return;
+          var step = Math.round(window.innerHeight * 0.85);
+          var docH = document.documentElement.scrollHeight;
+          var cur = window.scrollY || document.documentElement.scrollTop;
+          var top = cur;
+          switch (btn.dataset.action) {
+            case 'top': top = 0; break;
+            case 'up': top = Math.max(0, cur - step); break;
+            case 'down': top = cur + step; break;
+            case 'bottom': top = docH; break;
+          }
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        });
+        window.addEventListener('scroll', schedule, { passive: true });
+        window.addEventListener('resize', schedule);
+        update();
+      })();
+    </script> </body> </html>
