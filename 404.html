@@ -16,46 +16,40 @@
       }
       gtag('js', new Date());
       gtag('config', 'G-NE12J1LT5P');
-    </script><link rel="stylesheet" href="/_astro/ai.DZjDpfOF.css">
+    </script><link rel="stylesheet" href="/_astro/ai.CXMG6Fim.css">
 <style>.notfound[data-astro-cid-zetdm5md]{position:relative;z-index:1;min-height:70vh;display:flex;align-items:center;justify-content:center;padding:40px 20px}.notfound-card[data-astro-cid-zetdm5md]{max-width:440px;width:100%;text-align:center;padding:40px 28px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius);box-shadow:var(--shadow-md);backdrop-filter:blur(12px)}.notfound-code[data-astro-cid-zetdm5md]{font-size:64px;font-weight:800;line-height:1;background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}.notfound-title[data-astro-cid-zetdm5md]{margin:16px 0 8px;font-size:20px;color:var(--fg)}.notfound-desc[data-astro-cid-zetdm5md]{margin:0 0 24px;font-size:14px;color:var(--fg-muted)}.notfound-home[data-astro-cid-zetdm5md]{display:inline-block;padding:10px 20px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;color:var(--accent-fg);background:linear-gradient(135deg,var(--accent),var(--accent-2));text-decoration:none;box-shadow:var(--shadow-sm)}.notfound-home[data-astro-cid-zetdm5md]:hover{opacity:.92}
 </style></head> <body>  <main class="notfound container" data-astro-cid-zetdm5md> <div class="notfound-card" data-astro-cid-zetdm5md> <div class="notfound-code" data-astro-cid-zetdm5md>404</div> <h1 class="notfound-title" data-astro-cid-zetdm5md>页面走丢了</h1> <p class="notfound-desc" data-astro-cid-zetdm5md>
 抱歉，你访问的页面不存在或已被移动。
-</p> <a class="notfound-home" href="/" data-astro-cid-zetdm5md>← 返回美国导航首页</a> </div> </main>  <button id="scroll-nav-btn" type="button" aria-label="滚动到底部" aria-hidden="true" data-direction="down"> <svg class="ring" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"> <circle class="ring-track" cx="24" cy="24" r="20" stroke-width="2.5"></circle> <circle class="ring-progress" cx="24" cy="24" r="20" stroke-width="2.5"></circle> </svg> <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <polyline points="6 9 12 15 18 9"></polyline> </svg> </button> <script>
+</p> <a class="notfound-home" href="/" data-astro-cid-zetdm5md>← 返回美国导航首页</a> </div> </main>  <nav id="scroll-nav" class="scroll-nav" aria-label="页面滚动" aria-hidden="true"> <button type="button" class="scroll-nav-btn" data-action="top" aria-label="回到顶部" title="回到顶部"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M5 3h14"></path><path d="m18 13-6-6-6 6"></path><path d="M12 7v14"></path> </svg> </button> <button type="button" class="scroll-nav-btn" data-action="up" aria-label="上一屏" title="上一屏"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="m18 15-6-6-6 6"></path> </svg> </button> <button type="button" class="scroll-nav-btn" data-action="down" aria-label="下一屏" title="下一屏"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="m6 9 6 6 6-6"></path> </svg> </button> <button type="button" class="scroll-nav-btn" data-action="bottom" aria-label="到底部" title="到底部"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M12 17V3"></path><path d="m6 11 6 6 6-6"></path><path d="M19 21H5"></path> </svg> </button> </nav> <script>
       (function () {
-        var btn = document.getElementById('scroll-nav-btn');
-        if (!btn) return;
-        var BOTTOM_THRESHOLD = 0.8;
-        var SHOW_AFTER = 300;
+        var nav = document.getElementById('scroll-nav');
+        if (!nav) return;
+        var buttons = nav.querySelectorAll('.scroll-nav-btn');
+        var MIN_SCROLLABLE = 200;
+        var EDGE = 8;
         var ticking = false;
-        var lastVisible = null;
-        var lastDirection = null;
-        var lastProgressStr = '';
+        var lastState = '';
+        function setDisabled(btn, disabled) {
+          btn.disabled = disabled;
+          btn.setAttribute('aria-disabled', disabled ? 'true' : 'false');
+        }
         function update() {
           ticking = false;
           var scrollY = window.scrollY || document.documentElement.scrollTop;
           var viewH = window.innerHeight;
           var docH = document.documentElement.scrollHeight;
-          var scrollable = Math.max(1, docH - viewH);
-          var progress = Math.min(1, Math.max(0, scrollY / scrollable));
-          var progressStr = progress.toFixed(3);
-          if (progressStr !== lastProgressStr) {
-            btn.style.setProperty('--progress', progressStr);
-            lastProgressStr = progressStr;
-          }
-          var visible = scrollY > SHOW_AFTER;
-          if (visible !== lastVisible) {
-            btn.classList.toggle('visible', visible);
-            btn.setAttribute('aria-hidden', visible ? 'false' : 'true');
-            lastVisible = visible;
-          }
-          var direction = progress > BOTTOM_THRESHOLD ? 'up' : 'down';
-          if (direction !== lastDirection) {
-            btn.dataset.direction = direction;
-            btn.setAttribute(
-              'aria-label',
-              direction === 'up' ? '滚动到顶部' : '滚动到底部'
-            );
-            lastDirection = direction;
+          var scrollable = docH - viewH;
+          var visible = scrollable > MIN_SCROLLABLE;
+          var atTop = scrollY <= EDGE;
+          var atBottom = scrollY >= scrollable - EDGE;
+          var state = [visible, atTop, atBottom].join(',');
+          if (state === lastState) return;
+          lastState = state;
+          nav.classList.toggle('visible', visible);
+          nav.setAttribute('aria-hidden', visible ? 'false' : 'true');
+          for (var i = 0; i < buttons.length; i++) {
+            var a = buttons[i].dataset.action;
+            setDisabled(buttons[i], (a === 'top' || a === 'up') ? atTop : atBottom);
           }
         }
         function schedule() {
@@ -63,11 +57,19 @@
           ticking = true;
           requestAnimationFrame(update);
         }
-        btn.addEventListener('click', function () {
-          var top =
-            btn.dataset.direction === 'up'
-              ? 0
-              : document.documentElement.scrollHeight;
+        nav.addEventListener('click', function (e) {
+          var btn = e.target.closest('.scroll-nav-btn');
+          if (!btn || btn.disabled) return;
+          var step = Math.round(window.innerHeight * 0.85);
+          var docH = document.documentElement.scrollHeight;
+          var cur = window.scrollY || document.documentElement.scrollTop;
+          var top = cur;
+          switch (btn.dataset.action) {
+            case 'top': top = 0; break;
+            case 'up': top = Math.max(0, cur - step); break;
+            case 'down': top = cur + step; break;
+            case 'bottom': top = docH; break;
+          }
           window.scrollTo({ top: top, behavior: 'smooth' });
         });
         window.addEventListener('scroll', schedule, { passive: true });
